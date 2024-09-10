@@ -42,8 +42,15 @@
 
                 foreach (explode(PHP_EOL, $file) as $line) {
                     $lineData = explode('|', $line);
-                    echo $line . '<br>';
+                    echo '<h1>' . $lineData[0] . '</h1>' . '<br>';
+                    echo '<h2>' . $lineData[1] . '</h2>' . '<br>';
+                    echo '<h3>' . $lineData[2] . '</h3>' . '<br><br>';
                 }
+            }
+
+            function setFileData(string $path) : void
+            {
+
             }
 
             getFileData('ratings.txt');
